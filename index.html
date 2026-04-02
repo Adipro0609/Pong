@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Pong Game</title>
+  <style>
+    body {
+      background: #222;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #pongCanvas {
+      background: #111;
+      border: 2px solid #fff;
+      display: block;
+    }
+    #scoreboard {
+      color: #fff;
+      text-align: center;
+      font: bold 24px monospace;
+      margin-bottom: 10px;
+      letter-spacing: 1rem;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="scoreboard">0 : 0</div>
+    <canvas id="pongCanvas" width="700" height="400"></canvas>
+  </div>
+  <script>
+    const canvas = document.getElementById("pongCanvas");
+    const ctx = canvas.getContext("2d");
+    const scoreboard = document.getElementById('scoreboard');
+
+    // Game objects
+    const paddleHeight = 80, paddleWidth = 12;
+   
+
